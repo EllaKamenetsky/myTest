@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ListView fx:id="deviceListView" layoutX="45.0" layoutY="46.0" prefHeight="308.0" prefWidth="205.0" />
+        <TextField fx:id="deviceNameTextField" layoutX="277.0" layoutY="46.0" prefWidth="222.0" />
+        <Button fx:id="addDeviceButton" layoutX="277.0" layoutY="128.0" mnemonicParsing="false" onAction="#addDevice" text="Add Device" />
+      <RadioButton fx:id="devHardware" layoutX="277.0" layoutY="88.0" mnemonicParsing="false" text="Hardware">
+         <toggleGroup>
+            <ToggleGroup fx:id="deviceType" />
+         </toggleGroup>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="devSoftware" layoutX="375.0" layoutY="88.0" mnemonicParsing="false" text="Software" toggleGroup="$deviceType">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </RadioButton>
+      <Label fx:id="deviceTypeInfo" layoutX="279.0" layoutY="245.0" text="Device Type:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="279.0" layoutY="192.0" prefHeight="17.0" prefWidth="73.0" text="Version">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="versionInfo" layoutX="382.0" layoutY="189.0" />
+      <Label layoutX="279.0" layoutY="223.0" prefHeight="19.0" prefWidth="89.0" text="Manufacturer">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="manufacturerInfo" layoutX="382.0" layoutY="220.0" />
+      <Separator layoutX="275.0" layoutY="271.0" prefHeight="0.0" prefWidth="403.0" />
+      <Label layoutX="280.0" layoutY="279.0" prefHeight="17.0" prefWidth="73.0" text="Date">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dateInfo" layoutX="383.0" layoutY="276.0" />
+      <Separator layoutX="275.0" layoutY="307.0" prefHeight="3.0" prefWidth="403.0" />
+      <Label layoutX="277.0" layoutY="320.0" prefHeight="17.0" prefWidth="73.0" text="Location">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="locationInfo" layoutX="386.0" layoutY="317.0" />
+      <Label layoutX="275.0" layoutY="351.0" prefHeight="19.0" prefWidth="95.0" text="MAC Address">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="MACAddressInfo" layoutX="386.0" layoutY="348.0" />
+      <Button fx:id="editDeviceButton" layoutX="387.0" layoutY="384.0" mnemonicParsing="false" onAction="#editDevice" prefHeight="25.0" prefWidth="73.0" text="Save" />
+      <Label layoutX="280.0" layoutY="162.0" prefHeight="17.0" prefWidth="73.0" text="Name">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameInfo" layoutX="383.0" layoutY="159.0" />
+    </children>
+</AnchorPane>
